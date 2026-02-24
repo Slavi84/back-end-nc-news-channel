@@ -2,13 +2,13 @@
   "name": "be-nc-news",
   "version": "1.0.0",
   "description": "bc-nc-news",
-  "main": "api.js",
+  "main": "app.js",
   "scripts": {
     "setup-dbs": "psql -f ./db/setup-dbs.sql",
     "seed-dev": "node ./db/seeds/run-seed.js",
     "test": "jest --runInBand",
     "prepare": "husky install",
-    "start": "node api.js",
+    "start": "node app.js",
     "test-seed": "jest seed.test.js",
     "test-utils": "jest db/utils.test.js",
     "dev": "nodemon listen.js"
