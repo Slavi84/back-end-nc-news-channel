@@ -8,6 +8,6 @@ articlesRouter.get("/", getAllArticles);
 const { patchArticleVotes } = require("../controllers/articles.controller");
 articlesRouter.patch("/:article_id", patchArticleVotes);
 
-const getArticles = require("../controllers/articles.controller");
-articlesRouter.get("api/articles", getArticles);
+// const getArticles = require("../controllers/articles.controller");
+// articlesRouter.get("api/articles", getArticles);
 module.exports = articlesRouter;
