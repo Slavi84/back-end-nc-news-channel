@@ -20,8 +20,11 @@ const {
 
 const commentsRouter = express.Router();
 
-commentsRouter.get("/:article_id/comments", getCommentsByArticleId);
-commentsRouter.post("/:article_id/comments", postCommentByArticleId);
-commentsRouter.delete("/:comment_id", deleteComment);
+commentsRouter
+  .route("/:article_id/comments")
+  .get(getCommentsByArticleId)
+  .post(postCommentByArticleId);
+
+commentsRouter.route("/comments/:comment_id").delete(deleteComment);
 
 module.exports = commentsRouter;
